@@ -10,9 +10,14 @@ class Firstscreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
           children: [
                
-                Image.asset('assets/images/quiz-logo.png',
-                width: 300,
-                fit: BoxFit.contain),
+               // Opacity(
+                  //opacity: 0.5,
+                  //child:
+                   Image.asset('assets/images/quiz-logo.png',
+                  width: 300,
+                  fit: BoxFit.contain,
+                  color: Color.fromARGB(150, 255, 255, 255),),
+                //),
                  const SizedBox(height: 40),
                  const Text("Learn flutter in a fun way!",style:
                  TextStyle(
@@ -24,11 +29,12 @@ class Firstscreen extends StatelessWidget {
                  
                  ),
                  const SizedBox(height: 40),
-                OutlinedButton(onPressed: (){}, 
+                OutlinedButton.icon(onPressed: (){}, 
                 style: OutlinedButton.styleFrom(
                   backgroundColor:const Color.fromARGB(255, 1, 84,150),
                   foregroundColor:  Colors.white),
-                   child:Text("Start Quiz"),),
+                  icon: Icon(Icons.arrow_right_alt,color:Colors.white),
+                   label:Text("Start Quiz"),),
                   
               ],
             ),
